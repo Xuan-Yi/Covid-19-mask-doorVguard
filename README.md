@@ -1,4 +1,4 @@
-# Covid19-mask-doorVguard
+# Covid 19-mask-doorVguard
 
 ## Installation (For Windows 10)
 Before the following installation, you are expected to have your **python** and **pip** intalled.
