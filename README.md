@@ -33,7 +33,7 @@
    300 faces In-the-wild challenge: Database and results. 
    Image and Vision Computing (IMAVIS), Special Issue on Facial Landmark Localisation "In-The-Wild". 2016.
    ```
-   This model is included in the files, please download it and put it in the folder where .py file is. 
+   The .bz2 file of this  model is included in the repository , please download it and unzip it in the folder where .py file is. 
 
 
 
