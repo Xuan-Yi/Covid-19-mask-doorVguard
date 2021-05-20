@@ -9,10 +9,8 @@
    2. Make sure that your ```pip``` version is up-to-date (19.3 is the minimum supported version): ```pip install --upgrade pip```. Check version with ```pip -V```.
     
    3. Install opencv package via ```pip install opencv-python```.
-    
-   4. Import the package: ```import cv2```.
    
-   If you still run into any problem, please check [Official Tutorial](https://pypi.org/project/opencv-python/)
+   If you still run into  problem, please check [Official Tutorial](https://pypi.org/project/opencv-python/)
 
   [OpenCV Documentation](https://docs.opencv.org/master/)
    
