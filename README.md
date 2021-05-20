@@ -15,7 +15,7 @@
   [OpenCV Documentation](https://docs.opencv.org/master/)
    
   ### dlib
-   You can follow the steps given  in [this website](https://ibe.tw/install-dlib-for-python3-on-windows/), this method is the easiest method I've found now. Mind new version of dlib cannot be installed directly via ```pip```.
+   You can follow the steps given  in [this website](https://ibe.tw/install-dlib-for-python3-on-windows/), this method is the easiest method I've found now. Mind that new version of dlib for python cannot be installed directly via ```pip```.
   
   ### Other useful tools
    1. ```pip install imutils```
