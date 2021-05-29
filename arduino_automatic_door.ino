@@ -15,11 +15,12 @@ SoftwareSerial BT(7, 8); // (RX, TX) of Arduino
 
 enum BT_CMD
 {
+  NOTHING,
   OPENDOOR,
   CLOSEDOOR
 };
 
-static BT_CMD CMD = CLOSEDOOR;
+static BT_CMD CMD = NOTHING;
 
 void setup()
 {
@@ -50,43 +51,36 @@ void loop()
   {
     char mes = 'n';
     mes = BT.read();
-    switch (mes)
-    {
-    case 'o':
+    if (mes == 'o'){
       CMD = OPENDOOR;
-      break;
-    case 'c':
+    }else if (mes == 'c'){
       CMD = CLOSEDOOR;
-      break;
-    default:
-      CMD = CLOSEDOOR;
+    }else{
+      CMD = NOTHING;
     }
   }
 
 #ifdef DEBUG
-  Serial.print("CMD = ");
-  switch (CMD)
-  {
-  case OPENDOOR:
+  Serial.print("CMD = ");'
+  if (CMD == OPENDOOR){
     Serial.println("OPENDOOR");
-    break;
-  case CLOSEDOOR:
+  }else if (CMD == CLOSEDOOR){
     Serial.println("CLOSEDOOR");
-    break;
+  }else{
+    Serial.println("NOTHING");
   }
 #endif
-  switch (CMD)
-  {
-  case OPENDOOR:
+  if (CMD == OPENDOOR){
     left_door.write(0);
     right_door.write(180);
-    break;
-  case CLOSEDOOR:
+  }else if (CMD == CLOSEDOOR){
     left_door.write(90);
     right_door.write(90);
     buzz(12000);
     delay(50);
-    break;
+  }else{
+    left_door.write(90);
+    right_door.write(90);
   }
 #endif
 }
