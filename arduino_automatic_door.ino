@@ -61,7 +61,7 @@ void loop()
   }
 
 #ifdef DEBUG
-  Serial.print("CMD = ");'
+  Serial.print("CMD = ");
   if (CMD == OPENDOOR){
     Serial.println("OPENDOOR");
   }else if (CMD == CLOSEDOOR){
