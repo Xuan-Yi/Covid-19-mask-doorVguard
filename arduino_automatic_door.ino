@@ -7,9 +7,8 @@
 //buffer
 #define buffer 9
 //servo
-Servo left_door, right_door;
-#define left_door_pin 6
-#define right_door_pin 5
+Servo left_door;
+#define left_door_pin 65
 //bluetooth
 SoftwareSerial BT(7, 8); // (RX, TX) of Arduino
 
@@ -29,7 +28,6 @@ void setup()
   pinMode(buffer, LOW);
   //servo
   left_door.attach(left_door_pin);
-  right_door.attach(right_door_pin);
   //bluetooth
   BT.begin(9600);
 #ifdef DEBUG
@@ -42,7 +40,6 @@ void loop()
   //setup program
 #ifdef SETUP
   left_door.write(90);
-  right_door.write(90);
 #endif
 
   //main program
@@ -51,36 +48,48 @@ void loop()
   {
     char mes = 'n';
     mes = BT.read();
-    if (mes == 'o'){
+    if (mes == 'o')
+    {
       CMD = OPENDOOR;
-    }else if (mes == 'c'){
+    }
+    else if (mes == 'c')
+    {
       CMD = CLOSEDOOR;
-    }else{
+    }
+    else
+    {
       CMD = NOTHING;
     }
   }
 
 #ifdef DEBUG
   Serial.print("CMD = ");
-  if (CMD == OPENDOOR){
+  if (CMD == OPENDOOR)
+  {
     Serial.println("OPENDOOR");
-  }else if (CMD == CLOSEDOOR){
+  }
+  else if (CMD == CLOSEDOOR)
+  {
     Serial.println("CLOSEDOOR");
-  }else{
+  }
+  else
+  {
     Serial.println("NOTHING");
   }
 #endif
-  if (CMD == OPENDOOR){
-    left_door.write(0);
-    right_door.write(180);
-  }else if (CMD == CLOSEDOOR){
-    left_door.write(90);
-    right_door.write(90);
+  if (CMD == OPENDOOR)
+  {
+    left_door.write(88);
+  }
+  else if (CMD == CLOSEDOOR)
+  {
+    left_door.write(50);
     buzz(12000);
     delay(50);
-  }else{
-    left_door.write(90);
-    right_door.write(90);
+  }
+  else
+  {
+    left_door.write(88);
   }
 #endif
 }
