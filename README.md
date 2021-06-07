@@ -21,6 +21,8 @@ You can follow the steps given  in [this website](https://ibe.tw/install-dlib-fo
 1. ```pip install imutils```
 2. ```pip install matplotlib```
 3. ```pip install numpy``` (Actually, this is required for OpenCV)
+4. ```pip install face-recognition```
+5. ```pip install Pillow```
 
 ### For recognition of facial landmarks
 For facial landmarks recognition, we need a model. Actually, dlib has its build-in models. Here is another readily-trained model ```shape_predictor_68_face_landmarks.dat```, but is not allowed for commercial usage. Here is the license: 
