@@ -15,7 +15,7 @@ from PIL import Image, ImageFile
 def create_mask(image_path):
     pic_path = image_path
     # 口罩圖片路徑
-    mask_path = "D:/NTUEE/g1s/電資工程設計與實作(車車課)/自選專題 Arduino/Data_Generator/images/blue-mask.png"
+    mask_path = "D:/NTUEE/g1s/電資工程設計與實作(車車課)/自選專題 Arduino/Data_Generator/images/white-mask.png"
     model = "cnn"  # "hog" is faster, "cnn" is more accurate
     show = False
     FaceMasker(pic_path, mask_path, show, model).mask()
@@ -129,7 +129,7 @@ class FaceMasker:
     def _save(self):
         path_splits = os.path.split(self.face_path)
         # "要儲存新照片的資料夾路徑"+ 圖片原名稱
-        new_face_path = "D:/NTUEE/g1s/電資工程設計與實作(車車課)/自選專題 Arduino/Data_Generator/data/with_blue_mask/" + \
+        new_face_path = "D:/NTUEE/g1s/電資工程設計與實作(車車課)/自選專題 Arduino/Data_Generator/data/with_white_mask/" + \
             path_splits[1]
         self._face_img.save(new_face_path)
         print(f'Save to {new_face_path}')
