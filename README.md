@@ -2,8 +2,17 @@
 
 ## Installation (For Windows 10)
 Before the following installation, you are expected to have your **python** and **pip** intalled.
+### Required for mask-dooorVguard
+#### numpy
+```pip install numpy```
 
-### OpenCV-python
+#### Pillow (PIL)
+```pip install Pillow```
+
+#### face_recognition
+```pip install face-recognition```
+
+#### OpenCV-python (cv2)
 You can check [Official Tutorial](https://pypi.org/project/opencv-python/) or follow the steps given below(simplified from the official tutorial).
 
 1. If you have previous/other manually installed (= not installed via pip) version of OpenCV installed (e.g. cv2 module in the root of Python's site-packages), remove it before installation to avoid conflicts.
@@ -13,16 +22,22 @@ You can check [Official Tutorial](https://pypi.org/project/opencv-python/) or fo
 If you still run into  problems, please check [Official Tutorial](https://pypi.org/project/opencv-python/)
 
 [OpenCV Documentation](https://docs.opencv.org/master/)
-   
-### dlib
+
+#### PyTorch and Torchvision (torch, torchvision)
+In [https://pytorch.org/](https://pytorch.org/), you will get the pip command to install Pytorch and Torchvision. In **PyTorch Build**, please choose **Stable**. In **Package**, choose **Pip**. **Language**, of course **Python**. In **Compute Platform**, if you have a GPU that support CUDA, choose **CUDA 11.1**(the latest cuda version) and install the corresponding CUDA (refer to [this tutorial](https://www.programmersought.com/article/44961416825/)), or just choose **CPU**. Then copy the command in **Run this Command:** to your command prompt and run press enter!
+
+#### Matplotlib (matplotlib)
+```pip install matplotlib```
+
+#### pygame 
+```pip install pygame```
+
+### Not Required for mask-dooorVguard (for other tests)
+#### dlib (not required)
 You can follow the steps given  in [this website](https://ibe.tw/install-dlib-for-python3-on-windows/), this method is the easiest method I've found now. Mind that new version of dlib for python cannot be installed directly via ```pip```.
-  
-### Other useful tools
-1. ```pip install imutils```
-2. ```pip install matplotlib```
-3. ```pip install numpy``` (Actually, this is required for OpenCV)
-4. ```pip install face-recognition```
-5. ```pip install Pillow```
+
+#### imutils
+```pip install imutils```
 
 ### For recognition of facial landmarks
 For facial landmarks recognition, we need a model. Actually, dlib has its build-in models. Here is another readily-trained model ```shape_predictor_68_face_landmarks.dat```, but is not allowed for commercial usage. Here is the license: 
