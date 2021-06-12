@@ -39,7 +39,7 @@ You can follow the steps given  in [this website](https://ibe.tw/install-dlib-fo
 #### imutils
 ```pip install imutils```
 
-### For recognition of facial landmarks
+### For opencv_landmarks_test.py
 For facial landmarks recognition, we need a model. Actually, dlib has its build-in models. Here is another readily-trained model ```shape_predictor_68_face_landmarks.dat```, but is not allowed for commercial usage. Here is the license: 
 ``` 
 C. Sagonas, E. Antonakos, G, Tzimiropoulos, S. Zafeiriou, M. Pantic. 
