@@ -2,6 +2,8 @@
 
 ## Installation (For Windows 10)
 Before the following installation, you are expected to have your **python** and **pip** intalled.
+### Jupyter Notebook
+See the [official tutorial](https://code.visualstudio.com/docs/python/jupyter-support).
 ### Required for mask-dooorVguard
 #### numpy
 ```pip install numpy```
