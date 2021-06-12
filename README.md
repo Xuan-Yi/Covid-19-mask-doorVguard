@@ -11,6 +11,9 @@ See the [official tutorial](https://code.visualstudio.com/docs/python/jupyter-su
 #### Pillow (PIL)
 ```pip install Pillow```
 
+#### dlib
+You can follow the steps given  in [this website](https://ibe.tw/install-dlib-for-python3-on-windows/), this method is the easiest method I've found now. Mind that new version of dlib for python cannot be installed directly via ```pip```.
+
 #### face_recognition
 ```pip install face-recognition```
 
@@ -33,10 +36,6 @@ In [https://pytorch.org/](https://pytorch.org/), you will get the pip command to
 
 #### pygame 
 ```pip install pygame```
-
-### Not Required for mask-dooorVguard (for other tests)
-#### dlib (not required)
-You can follow the steps given  in [this website](https://ibe.tw/install-dlib-for-python3-on-windows/), this method is the easiest method I've found now. Mind that new version of dlib for python cannot be installed directly via ```pip```.
 
 #### imutils
 ```pip install imutils```
