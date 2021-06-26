@@ -21,7 +21,7 @@ from sklearn.model_selection import train_test_split
 from torch.optim import lr_scheduler
 from torchvision import datasets, models, transforms
 
-filepath = "D:/NTUEE/g1s/電資工程設計與實作(車車課)/自選專題 Arduino/Model_Generator/mask_recognition_model2.pth"
+filepath = "/home/pi/Downloads/mask_recognition_model2.pth"
 model = torch.load(filepath)
 
 
