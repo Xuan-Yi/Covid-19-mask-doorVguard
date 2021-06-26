@@ -10,7 +10,7 @@ from label_detect import classify_face
 
 mixer.init()
 sound = mixer.Sound(
-    "D:/NTUEE/g1s/電資工程設計與實作(車車課)/自選專題 Arduino/Mask_Recognition/alarm.wav")
+    "/home/pi/Downloads/Covid-19-mask-doorVguard-main/alarm.wav")
 
 
 #face = cv2.CascadeClassifier('/media/preeth/Data/prajna_files/Drowsiness_detection/haar_cascade_files/haarcascade_frontalface_alt.xml')
