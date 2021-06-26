@@ -34,8 +34,8 @@ In [https://pytorch.org/](https://pytorch.org/), you will get the pip command to
 #### Matplotlib (matplotlib)
 ```pip install matplotlib```
 
-#### pygame 
-```pip install pygame```
+#### keras 
+```pip install keras```
 
 #### imutils
 ```pip install imutils```
