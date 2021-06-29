@@ -8,18 +8,17 @@
 #define buffer 9
 //servo
 Servo left_door;
-#define left_door_pin 65
+#define left_door_pin 6
 //bluetooth
 SoftwareSerial BT(7, 8); // (RX, TX) of Arduino
 
 enum BT_CMD
 {
-  NOTHING,
   OPENDOOR,
   CLOSEDOOR
 };
 
-static BT_CMD CMD = NOTHING;
+static BT_CMD CMD = CLOSEDOOR;
 
 void setup()
 {
@@ -46,19 +45,14 @@ void loop()
 #ifndef SETUP
   if (BT.available())
   {
-    char mes = 'n';
+    char mes = 'o';
     mes = BT.read();
-    if (mes == 'o')
-    {
-      CMD = OPENDOOR;
-    }
-    else if (mes == 'c')
-    {
+    if (mes == 'c') {
       CMD = CLOSEDOOR;
     }
     else
     {
-      CMD = NOTHING;
+      CMD = OPENDOOR;
     }
   }
 
@@ -71,10 +65,6 @@ void loop()
   else if (CMD == CLOSEDOOR)
   {
     Serial.println("CLOSEDOOR");
-  }
-  else
-  {
-    Serial.println("NOTHING");
   }
 #endif
   if (CMD == OPENDOOR)
