@@ -21,7 +21,7 @@ from sklearn.model_selection import train_test_split
 from torch.optim import lr_scheduler
 from torchvision import datasets, models, transforms
 
-filepath = "/home/pi/Downloads/mask_recognition_model2.pth"
+filepath = "mask_recognition_model.pth"
 model = torch.load(filepath)
 
 
@@ -57,20 +57,20 @@ def classify_face(image):
     #image = np.asarray(im)
     im = Image.fromarray(image)
     image = process_image(im)
-    print('image_processed')
+    # print('image_processed')
     img = image.unsqueeze_(0)
     img = image.float()
 
     model.eval()
     model.cpu()
     output = model(image)
-    print(output, '##############output###########')
+    # print(output, '##############output###########')
     _, predicted = torch.max(output, 1)
-    print(predicted.data[0], "predicted")
+    # print(predicted.data[0], "predicted")
 
     classification1 = predicted.data[0]
     index = int(classification1)
-    print(class_names[index])
+    # print(class_names[index])
     return class_names[index]
 
 
@@ -78,4 +78,4 @@ if __name__ == '__main__':
     # map_location=torch.device('cpu')
     image = cv2.imread('praj.jpg')
     label = classify_face(image)
-    print("the label is", label)
+    # print("the label is", label)
