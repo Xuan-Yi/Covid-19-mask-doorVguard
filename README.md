@@ -4,7 +4,36 @@
 It's recommended to use [**Anaconda Python**](https://www.anaconda.com/products/individual), or you will suffer from installing piles of modules.
 
 #### [Anaconda Python](https://www.anaconda.com/products/individual)
-It's recommended to always run `pip` and `conda` in **anaconda prompt** to ensure that every modules are installed in anaconda environment but not other pythons, expecially `pip`.
+* Remember to add add Anaconda to PATH, you can folllow this tutorial:
+    1. In **anaconda prompt**, type
+        ```
+        where conda
+        ```
+        then it will show
+        ```
+        <Some Path>\anaconda3\Library\bin\conda.bat
+        <Some Path>\anaconda3\Scripts\conda.exe
+        <Some Path>\anaconda3\condabin\conda.bat
+        ```
+        add `<Some Path>\anaconda3\Scripts` to PATH.
+    2. Also in **anaconda prompt**, type 
+        ```
+        where python
+        ```
+        then it will show
+        ```
+        <Some Path>\anaconda3\python.exe
+        <Some Path>\AppData\Local\Microsoft\WindowsApps\python.exe
+        ```
+        add `<Some Path>\anaconda3` to PATH.
+    3. Reopen all prompts, then in VScode, you can access Anaconda prompt at **cmd prompt**.
+* It's better to  open a new environment for this project, but you may find [**code runner**](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) not work for conda env, the solution is to activate your environment before opening VScode:
+    1. Change default terminal of window terminal to **cmd**
+    2. Activate your conda env before you open VScode, that is, 
+        ```
+        conda activate <Your env>
+        code .
+        ```
 
 #### [face_recognition](https://anaconda.org/conda-forge/face_recognition)
 ```conda install -c conda-forge face_recognition```
@@ -15,10 +44,16 @@ It's recommended to always run `pip` and `conda` in **anaconda prompt** to ensur
 #### [Pandas](https://anaconda.org/anaconda/pandas)
 ```conda install -c anaconda pandas```
 
-#### [Pytorch]((https://pytorch.org/))
+#### [Pytorch](https://pytorch.org/)
 * Go to [pytorch](https://pytorch.org/), you will get the command to install Pytorch and other required modules. In **PyTorch Build**, please choose **Stable**. In **Package**, choose **Conda**. In **Language**, chooses **Python**. In **Compute Platform**, if you have a GPU that support CUDA, choose the latest CUDA version that your CPU support, or just choose **CPU** if you have no GPU. Then copy the command in **Run this Command:** to your Anaconda prompt and run!
-* As seen in the conda command, CUDA has been installed; therefore, you needn't go to CUDA website to downloaad and install CUDA again.
-* cuDNN is also a awesome tool, but I'm still finding method to access it in Pytorch.
+* As seen in the conda command, CUDA has been installed(actually, is a subset of that you download from [official website](https://pytorch.org/); besides, necessary cuDNN is also included); therefore, you needn't go official website to downloaad and install CUDA again.
+* Pytorch is a large file(about 1.5GB), so it's better to connect to a wired network.
+
+#### [scikit-learn](https://pypi.org/project/scikit-learn/)
+```pip install scikit-learn```
+
+#### [matplotlib](https://pypi.org/project/matplotlib/)
+```pip install matplotlib```
 
 #### [keras](https://pypi.org/project/keras/)
 ```pip install keras```
