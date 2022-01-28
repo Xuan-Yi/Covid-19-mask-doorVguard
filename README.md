@@ -12,7 +12,7 @@ It's recommended to always run `pip` and `conda` in **anaconda prompt** to ensur
 * cuDNN is also a awesome tool, but I'm still finding method to access it in Pytorch.
 
 #### [opencv]()
-```conda install -c conda-forge/label/gcc7 opencv```
+```conda install -c conda-forge opencv```
 
 #### [face_recognition](https://anaconda.org/conda-forge/face_recognition)
 ```conda install -c conda-forge face_recognition```
