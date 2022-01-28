@@ -20,13 +20,13 @@ It's recommended to always run `pip` and `conda` in **anaconda prompt** to ensur
 * As seen in the conda command, CUDA has been installed; therefore, you needn't go to CUDA website to downloaad and install CUDA again.
 * cuDNN is also a awesome tool, but I'm still finding method to access it in Pytorch.
 
-### [keras](https://pypi.org/project/keras/)
+#### [keras](https://pypi.org/project/keras/)
 ```pip install keras```
 
-### [tensorflow](https://pypi.org/project/tensorflow/)
+#### [tensorflow](https://pypi.org/project/tensorflow/)
 ```pip install tensorflow```
 
-### [pygame](https://pypi.org/project/pygame/)
+#### [pygame](https://pypi.org/project/pygame/)
 ```pip install pygame```
 
 # Frame
