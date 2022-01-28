@@ -1,6 +1,5 @@
 # model 
 mask_recognition_model.pth
-mask_recognition_model_org.pth
 
 # data generator
 Data Generator/data/with_black_mask
@@ -9,4 +8,3 @@ Data Generator/data/with_white_mask
 
 # model generator
 Model Generator/experiments
-Model Generator/experiements_org
