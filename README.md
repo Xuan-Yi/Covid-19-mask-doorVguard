@@ -1,39 +1,32 @@
 # Covid 19-mask-doorVguard
 
-## Installation (For Windows 10)
-It's recommended to use [**Anaconda Python**](https://www.anaconda.com/products/individual), or you will suffer from installing piles of modules.
-
-#### [Anaconda Python](https://www.anaconda.com/products/individual)
-* Remember to add add Anaconda to PATH, you can folllow this tutorial:
-    1. In **anaconda prompt**, type
+## Code with [Anaconda](https://www.anaconda.com/products/individual)
+* You needn't add anaconda or python to PATH.
+* Anaconda user sometimes use virtual envs, but it's not convenient to use anaconda's environments(env) with [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner),
+to solve this problem, since time is money, you should follow steps below: 
+    
+    1. open [**regedit(登錄編輯程式)**](https://support.microsoft.com/en-us/windows/how-to-open-registry-editor-in-windows-10-deab38e6-91d6-e0aa-4b7c-8878d9e07b11), go to `<Your device>\HKEY_CLASSES_ROOT\Directory\Background\shell`
+    2. Add a new Key(機碼) named `Anaconda_shell`. Value of its **Defaults(預設)** is `Anaconda Prompt(anaconda3)` , the text shown; then add a new String named **icon**, its value is `<Anaconda path>\Menu\Iconleak-Atrous-Console.ico` , the path of icon shown.
+    3. Below `Anaconda_shell`, add a new Key named `command`, the value of **Defaults(預設)** is `cmd.exe /K <Anaconda path>\Scripts\activate.bat`. Please replace **<Anaconda path>** with your anaconda path, XXXX\Anaconda3.
+    * The structure is
         ```
-        where conda
+        <Your device>\HKEY_CLASSES_ROOT\Directory\Background\shell
+        |- Anaconda_shell
+            #   Defaults(預設):   Anaconda Prompt(anaconda3) 
+            #   icon:   <Anaconda path>\Menu\Iconleak-Atrous-Console.ico
+            |- command
+                #   Defaults(預設): cmd.exe /K <Anaconda path>\Scripts\activate.bat
         ```
-        then it will show
-        ```
-        <Some Path>\anaconda3\Library\bin\conda.bat
-        <Some Path>\anaconda3\Scripts\conda.exe
-        <Some Path>\anaconda3\condabin\conda.bat
-        ```
-        add `<Some Path>\anaconda3\Scripts` to PATH.
-    2. Also in **anaconda prompt**, type 
-        ```
-        where python
-        ```
-        then it will show
-        ```
-        <Some Path>\anaconda3\python.exe
-        <Some Path>\AppData\Local\Microsoft\WindowsApps\python.exe
-        ```
-        add `<Some Path>\anaconda3` to PATH.
-    3. Reopen all prompts, then in VScode, you can access Anaconda prompt at **cmd prompt**.
-* It's better to  open a new environment for this project, but you may find [**code runner**](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) not work for conda env, the solution is to activate your environment before opening VScode:
-    1. Change default terminal of window terminal to **cmd**
-    2. Activate your conda env before you open VScode, that is, 
+    * Finally, at the folder *Covid 19-mask-doorVguard*, right click mouse, you will see **Anaconda Prompt(anaconda3)**, then you can easily use Anaconda prompt now!
+    * To use **Code Runner** in VScode, please activate your environment before you open VScode, that is
         ```
         conda activate <Your env>
         code .
         ```
+        Hint: you can check your anaconda environvents via `conda env list`.
+
+## Installation (For Windows 10)
+It's recommended to use [**Anaconda Python**](https://www.anaconda.com/products/individual), or you will suffer from installing piles of modules.
 
 #### [face_recognition](https://anaconda.org/conda-forge/face_recognition)
 ```conda install -c conda-forge face_recognition```
