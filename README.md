@@ -64,8 +64,8 @@ It's recommended to use [**Anaconda Python**](https://www.anaconda.com/products/
 #### [pygame](https://pypi.org/project/pygame/)
 ```pip install pygame```
 
-# Frame
-I've seperated this code into 3 processes:
+# Architecture
+I've seperated this code into 3 portions:
 1. Generate data (**Data Generator**)
 2. Generator model (**Model Generator**)
 3. Realize face mask recognition
