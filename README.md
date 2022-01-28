@@ -11,6 +11,9 @@ It's recommended to always run `pip` and `conda` in **anaconda prompt** to ensur
 * As seen in the conda command, CUDA has been installed; therefore, you needn't go to CUDA website to downloaad and install CUDA again.
 * cuDNN is also a awesome tool, but I'm still finding method to access it in Pytorch.
 
+#### [opencv]()
+```conda install -c conda-forge/label/gcc7 opencv```
+
 #### [face_recognition](https://anaconda.org/conda-forge/face_recognition)
 ```conda install -c conda-forge face_recognition```
 
@@ -82,9 +85,9 @@ I'will introduce these parts step by step below.
     * This folder should be under `Covid-19-mask-doorVguard/Data Generator/data`
     * Image source are [here](https://github.com/prajnasb/observations.git) and Google.
 4. [experiements.zip](https://drive.google.com/file/d/1hIF20_zFoS-TAJ3BmJ3HSJ0dTFR9CPvi/view?usp=sharing)
-    * This folder can also be generated automatically, so you actually need't download this file.
+    * This folder can also be generated automatically, so you actually needn't download this file.
 5. [mask_recognition_model.zip](https://drive.google.com/file/d/1iRQ3-7Vn1hATtzjIhWjpQH5LKY8YE0SK/view?usp=sharing)
-    * This is the final model for face mask recognition, and can also be generated automatically, so you need't download this file, either.
+    * This is the final model for face mask recognition, and can also be generated automatically, so you needn't download this file, either.
 
 # Announcement
 * Most code are from [here](https://github.com/prajnasb/observations.git)
